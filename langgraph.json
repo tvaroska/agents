@@ -1,8 +1,7 @@
 {
     "dependencies": [
-        "langchain-community=^0.3.13",
-        "langchain-google-vertexai",
-        "google-cloud-aiplatform",
+        "langchain-community==0.3.13",
+        "langchain-google-vertexai==2.0.9",
         "./accounts"
     ],
     "graphs": {
