@@ -4,6 +4,7 @@
         "."
     ],
     "graphs": {
-        "accounts": "./accounts/agent.py:app"
+        "accounts": "accounts/agent.py:app",
+        "chain": "chain/agent.py:graph"
     }
 }

@@ -26,7 +26,7 @@ services:
             retries: 5
             interval: 5s
     langgraph-api:
-        image: agents:001
+        image: agents:002
         ports:
             - "8123:8000"
         depends_on:
