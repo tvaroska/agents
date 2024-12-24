@@ -15,6 +15,7 @@ langchain-google-vertexai = "^2.0.9"
 langchain-community = "^0.3.13"
 numpy = "<2.0.0"
 grpcio = "1.67.1"
+feedparser = "^6.0.11"
 
 
 [tool.poetry.group.dev.dependencies]
