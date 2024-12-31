@@ -17,7 +17,7 @@ class Article(BaseModel):
     title: str
     summary: Optional[str] = None
     content: Optional[Union[str, bytes]] = None
-    mime_type: str = 'text/plain'
+    mime_type: str
 
     def to_xml(self):
 
@@ -86,11 +86,8 @@ def new_articles(feeds: List[str], starting_point: datetime) -> List[Article]:
         if 'bozo_exception' in feed:
             print(f"Warning: Error parsing feed {feed_url}: {feed.bozo_exception}")
             continue
-                
+    
         for entry in feed.entries:
-            # Determine media type based on feed URL and entry content
-            media_type = get_media_type(feed_url)
-
             # Get published date from the entry
             if hasattr(entry, 'published_parsed'):
                 pub_date = datetime.fromtimestamp(mktime(entry.published_parsed))
@@ -102,6 +99,8 @@ def new_articles(feeds: List[str], starting_point: datetime) -> List[Article]:
             # Check if article is newer than starting_point
             if pub_date > starting_point:
                 if hasattr(entry, 'link'):
+                    # Determine media type based on feed URL and entry content
+                    media_type = get_media_type(entry.link)
                     # Extract summary, handling potential missing field
                     summary = None
                     if hasattr(entry, 'summary'):
@@ -111,7 +110,7 @@ def new_articles(feeds: List[str], starting_point: datetime) -> List[Article]:
                     rss_entry = Article(
                         title=entry.title,
                         url=entry.link,
-                        media_type=media_type,
+                        mime_type=media_type,
                         summary=summary
                     )
                     new_entries.append(rss_entry)
