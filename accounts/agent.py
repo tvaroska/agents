@@ -8,7 +8,7 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import ToolNode
 from langgraph.prebuilt.chat_agent_executor import AgentState
 
-model_with_tools = ChatVertexAI(model='gemini-1.5-flash-002').bind_tools(tools)
+model_with_tools = ChatVertexAI(model='gemini-2.5-flash').bind_tools(tools)
 
 QUERY = "How many account does James Smith (credit card number 8248) have?"
 
