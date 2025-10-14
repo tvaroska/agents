@@ -1,0 +1,80 @@
+{
+  "eval_set_id": "evalsetcaffbd",
+  "name": "evalsetcaffbd",
+  "eval_cases": [
+    {
+      "eval_id": "casea505d3",
+      "conversation": [
+        {
+          "invocation_id": "e-ac61a0f8-c390-41f4-83f0-0909dc127b86",
+          "user_content": {
+            "parts": [
+              {
+                "text": "hi"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Hello there! Ready for a laugh?\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything! 😂\n\nWhat's up?"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1760462964.538244
+        },
+        {
+          "invocation_id": "e-0a2e7c0b-fedd-445f-aa0a-ff73ac7f5e1d",
+          "user_content": {
+            "parts": [
+              {
+                "text": "something about few european countries"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Okay, I've got one for you about a few European countries!\n\nHow many Europeans does it take to change a lightbulb?\n\n*   **A German:** One. But they'll read the 20-page manual first and ensure it's precisely to standard.\n*   **An Italian:** Five! One to hold the bulb, two to passionately argue about which way it turns, and two more to throw their hands up in despair before making a fantastic meal.\n*   **A Frenchman:** None. They'll just declare the room now has \"mood lighting\" and complain about the quality of the electricity.\n\nHope that gave you a chuckle! 😄"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1760462978.869453
+        },
+        {
+          "invocation_id": "e-8fe2c7b1-b0fc-4559-9fd7-ab51862eed0b",
+          "user_content": {
+            "parts": [
+              {
+                "text": "add russian to this joke"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Okay, adding Russia to the mix! Here's an updated version:\n\nHow many Europeans does it take to change a lightbulb?\n\n*   **A German:** One. But they'll read the 20-page manual first and ensure it's precisely to standard.\n*   **An Italian:** Five! One to hold the bulb, two to passionately argue about which way it turns, and two more to throw their hands up in despair before making a fantastic meal.\n*   **A Frenchman:** None. They'll just declare the room now has \"mood lighting\" and complain about the quality of the electricity.\n*   **A Russian:** One. They'll stare at it for a long moment, sigh deeply, declare it \"fate,\" and then fix it perfectly with grim efficiency, probably using a tool they fashioned from a piece of old pipe.\n\nHope that makes you chuckle even more! 😄"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1760463014.489289
+        }
+      ],
+      "session_input": {
+        "app_name": "joke_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1760463065.3255928
+    }
+  ],
+  "creation_timestamp": 1760463059.4553473
+}
