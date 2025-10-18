@@ -449,10 +449,14 @@ version = "0.1.0"
 source = { virtual = "coding" }
 dependencies = [
     { name = "google-adk" },
+    { name = "google-cloud-trace" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "google-adk", specifier = ">=1.16.0" }]
+requires-dist = [
+    { name = "google-adk", specifier = ">=1.16.0" },
+    { name = "google-cloud-trace", specifier = ">=1.13.5" },
+]
 
 [[package]]
 name = "colorama"
