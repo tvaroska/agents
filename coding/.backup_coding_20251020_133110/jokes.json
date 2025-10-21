@@ -1,0 +1,8 @@
+{
+  "agent": "joke_agent",
+  "conversations": [
+    ["Tell me a joke about programming"],
+    ["What's a funny joke about cats?"],
+    ["Give me a dad joke"]
+  ]
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "project_id": "conten001",
+    "trace_id": "e08feda6f3ca5d9042a8098a80bfc742",
+    "spans": [
+      {
+        "span_id": "8168848235334261379",
+        "name": "invocation",
+        "parent_span_id": null,
+        "start_time": "2025-10-18T17:59:54.932142+00:00",
+        "end_time": "2025-10-18T18:00:01.157616+00:00",
+        "kind": "0",
+        "labels": {
+          "g.co/agent": "opentelemetry-python 1.37.0; google-cloud-trace-exporter 1.9.0"
+        }
+      },
+      {
+        "span_id": "31719294176749065",
+        "name": "invoke_agent root_agent",
+        "parent_span_id": "8168848235334261379",
+        "start_time": "2025-10-18T17:59:54.932484+00:00",
+        "end_time": "2025-10-18T18:00:01.157594+00:00",
+        "kind": "0",
+        "labels": {
+          "gen_ai.operation.name": "invoke_agent",
+          "gen_ai.conversation.id": "s_123",
+          "g.co/agent": "opentelemetry-python 1.37.0; google-cloud-trace-exporter 1.9.0",
+          "gen_ai.agent.description": "",
+          "gen_ai.agent.name": "root_agent"
+        }
+      },
+      {
+        "span_id": "3973791525204283101",
+        "name": "call_llm",
+        "parent_span_id": "31719294176749065",
+        "start_time": "2025-10-18T17:59:54.933527+00:00",
+        "end_time": "2025-10-18T18:00:01.157528+00:00",
+        "kind": "0",
+        "labels": {
+          "gcp.vertex.agent.event_id": "dcd51cb4-f37d-4f75-aaee-7ef9a4b40037",
+          "gen_ai.usage.output_tokens": "11",
+          "gen_ai.response.finish_reasons": "stop",
+          "gcp.vertex.agent.session_id": "s_123",
+          "gen_ai.system": "gcp.vertex.agent",
+          "gen_ai.request.model": "gemini-2.5-flash-lite",
+          "gcp.vertex.agent.invocation_id": "e-1eebf7f6-3534-4acc-a8b4-c945510d0bf2",
+          "g.co/agent": "opentelemetry-python 1.37.0; google-cloud-trace-exporter 1.9.0",
+          "gcp.vertex.agent.llm_request": "{\"model\": \"gemini-2.5-flash-lite\", \"config\": {\"http_options\": {\"headers\": {\"x-goog-api-client\": \"google-adk/1.16.0 gl-python/3.12.3\", \"user-agent\": \"google-adk/1.16.0 gl-python/3.12.3\"}}, \"system_instruction\": \"\\n    You are a helpfull research assistant, ",
+          "gen_ai.usage.input_tokens": "276",
+          "gcp.vertex.agent.llm_response": "{\"content\":{\"parts\":[{\"function_call\":{\"args\":{\"agent_name\":\"coding_agent\"},\"name\":\"transfer_to_agent\"}}],\"role\":\"model\"},\"finish_reason\":\"STOP\",\"usage_metadata\":{\"candidates_token_count\":11,\"candidates_tokens_details\":[{\"modality\":\"TEXT\",\"token_count\":11}"
+        }
+      },
+      {
+        "span_id": "15431845289862042984",
+        "name": "execute_tool transfer_to_agent",
+        "parent_span_id": "3973791525204283101",
+        "start_time": "2025-10-18T17:59:55.710949+00:00",
+        "end_time": "2025-10-18T17:59:55.711214+00:00",
+        "kind": "0",
+        "labels": {
+          "gen_ai.tool.description": "Transfer the question to another agent.\n\nThis tool hands off control to another agent when it's more suitable to\nanswer the user's question according to the agent's description.\n\nArgs:\n  agent_name: the agent name to transfer to.",
+          "gcp.vertex.agent.llm_response": "{}",
+          "gen_ai.tool.type": "FunctionTool",
+          "gcp.vertex.agent.event_id": "902855b3-9e0c-4f49-99aa-180a8fb6e611",
+          "gcp.vertex.agent.tool_response": "{\"result\": null}",
+          "gcp.vertex.agent.tool_call_args": "{\"agent_name\": \"coding_agent\"}",
+          "gen_ai.operation.name": "execute_tool",
+          "gcp.vertex.agent.llm_request": "{}",
+          "g.co/agent": "opentelemetry-python 1.37.0; google-cloud-trace-exporter 1.9.0",
+          "gen_ai.tool.name": "transfer_to_agent",
+          "gen_ai.tool.call.id": "adk-bc436240-0c41-46bc-97d2-0ad0e2b8a8e7"
+        }
+      },
+      {
+        "span_id": "11193823422919148784",
+        "name": "invoke_agent coding_agent",
+        "parent_span_id": "3973791525204283101",
+        "start_time": "2025-10-18T17:59:55.711349+00:00",
+        "end_time": "2025-10-18T18:00:01.157496+00:00",
+        "kind": "0",
+        "labels": {
+          "gen_ai.operation.name": "invoke_agent",
+          "gen_ai.conversation.id": "s_123",
+          "g.co/agent": "opentelemetry-python 1.37.0; google-cloud-trace-exporter 1.9.0",
+          "gen_ai.agent.description": "",
+          "gen_ai.agent.name": "coding_agent"
+        }
+      },
+      {
+        "span_id": "10677129185521807893",
+        "name": "call_llm",
+        "parent_span_id": "11193823422919148784",
+        "start_time": "2025-10-18T17:59:55.712183+00:00",
+        "end_time": "2025-10-18T18:00:01.157349+00:00",
+        "kind": "0",
+        "labels": {
+          "gcp.vertex.agent.event_id": "fab97143-c734-4d06-9b3f-4eb0aab78406",
+          "gen_ai.usage.output_tokens": "10",
+          "gen_ai.response.finish_reasons": "stop",
+          "gcp.vertex.agent.session_id": "s_123",
+          "gen_ai.system": "gcp.vertex.agent",
+          "gen_ai.request.model": "gemini-2.5-pro",
+          "gcp.vertex.agent.invocation_id": "e-1eebf7f6-3534-4acc-a8b4-c945510d0bf2",
+          "g.co/agent": "opentelemetry-python 1.37.0; google-cloud-trace-exporter 1.9.0",
+          "gcp.vertex.agent.llm_request": "{\"model\": \"gemini-2.5-pro\", \"config\": {\"http_options\": {\"headers\": {\"x-goog-api-client\": \"google-adk/1.16.0 gl-python/3.12.3\", \"user-agent\": \"google-adk/1.16.0 gl-python/3.12.3\"}}, \"system_instruction\": \"You are a coding agent, create a python script. If i",
+          "gen_ai.usage.input_tokens": "342",
+          "gcp.vertex.agent.llm_response": "{\"content\":{\"parts\":[{\"thought_signature\":\"CuAMAePx_14yGdKqId1A6qc4Ay88C-4nYl4fCV0iZGMnCSK7djzy2zAz4LoIBjkn2mmtlWF4TJyZGMF2-q1BTmkBE9OP-4804fkG8huGnHMl5n5q8PnBHgiZ44uvxAYzbRocZQAWmVbKAKBIZzNliQC91cuDM3iZIFhcXp0OzfHGGx8VIsceVfkVHFkQn-q23tFb-D5OSFzUUd8JqklcT"
+        }
+      }
+    ]
+  }
+]
