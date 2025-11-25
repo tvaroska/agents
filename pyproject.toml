@@ -22,4 +22,6 @@ py-modules = ['accounts']
 [tool.uv.workspace]
 members = [
     "coding",
+    "distributed",
+    "news",
 ]

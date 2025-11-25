@@ -18,6 +18,7 @@ from zoneinfo import ZoneInfo
 
 import google.auth
 from google.adk.agents import Agent
+from google.adk.tools import google_search
 
 _, project_id = google.auth.default()
 os.environ.setdefault("GOOGLE_CLOUD_PROJECT", project_id)
@@ -61,6 +62,6 @@ def get_current_time(query: str) -> str:
 root_agent = Agent(
     name="root_agent",
     model="gemini-2.5-flash",
-    instruction="You are a helpful AI assistant designed to provide accurate and useful information.",
-    tools=[get_weather, get_current_time],
+    instruction="You are a recipe suggester.",
+    tools=[get_weather, get_current_time, google_search],
 )
